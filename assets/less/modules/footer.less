@@ -1,0 +1,36 @@
+.site-footer {
+  display: block;
+  background-color: @hr;
+  padding: @gutter 0;
+  font-size: 0.85rem;
+  .clearfix;
+
+  ul {
+    width: 30%;
+    display: block;
+    float: left;
+    list-style-type: none;
+    &:first-of-type {
+        padding-left: 0;
+    }
+
+    li {
+      &:first-of-type {
+        text-transform: uppercase;
+        padding-bottom: (@gutter / 4);
+        .medium;
+      }
+
+      a {
+        font-weight: normal;
+        text-transform: none;
+      }
+    }
+  }
+
+  .right {
+    width: 40%;
+    float: right;
+    text-align: right;
+  }
+}

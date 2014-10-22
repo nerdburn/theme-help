@@ -1,0 +1,12 @@
+{
+  "name": "theme-help",
+  "description": "Postachio help theme.",
+  "devDependencies": {
+    "gulp": "~3.8.7",
+    "gulp-concat": "~2.3.4",
+    "gulp-less": "~1.3.3",
+    "path": "*",
+    "gulp-rename": "~1.2.0",
+    "gulp-uglify": "~0.3.1"
+  }
+}

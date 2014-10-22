@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if post %}{{ post.title }}{% else %}Help Center{% endif %} | Postach.io</title>
+
+    {{ header_meta }}
+
+    <!-- css -->
+    <link rel="stylesheet"  href="{{ assets('css/style.css') }}">
+
+    <!-- fonts.com asynchronous -->
+    <script>
+    (function(d, t) {
+      var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+      g.src = '//fast.fonts.net/jsapi/33453319-536f-4e2f-9943-ed99e75a8297.js';
+      s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+    </script>
+
+    {% if site.analytics %}
+    <!-- universal analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{{ site.analytics }}', 'postach.io');
+      ga('send', 'pageview');
+
+    </script>        
+    {% endif %}
+  </head>
+  <body>
+    <!-- rainbow stripe -->
+    <div class="rainbow"></div>
+
+    <!-- header -->
+    <header class="site-header">
+      <h1 class="logo"><a href="{{ site.base_url }}"><span>{{ site.name }}</span></a></h1>
+      <form class="search">
+        <label>
+          Help Center
+          <span class="ss-icon">search</span>
+        </label>
+        <div class="search-input">
+          <input type="text" placeholder="Search help center" data-typeahead />
+        </div>
+      </form>
+    </header>
+
+    <!-- table of contents -->
+    <div class="toc">
+      <h2>
+        Table of Contents
+        <a href="#" class="toggle"><span class="toggle-message">Hide</span><span class="ss-icon toggle-icon">navigateup</span></a>
+      </h2>
+      <div class="toc-items">
+        <div class="container">
+          <ul>
+            <li><a href="{{ site.base_url }}" class="{{ set_active('/') }}">Getting Started</a></li>
+            <li><a href="{{ site.base_url }}/tag/creating-posts" class="{{ set_active('tag/creating-posts') }}">Creating Posts</a></li>
+            <li><a href="{{ site.base_url }}/tag/post-embeds" class="{{ set_active('tag/post-embeds') }}">Post Embeds</a></li>
+          </ul>
+          <ul>
+            <li><a href="{{ site.base_url }}/tag/integrations" class="{{ set_active('tag/integrations') }}">Integrations</a></li>
+            <li><a href="{{ site.base_url }}/tag/theme-code" class="{{ set_active('tag/theme-code') }}">Theme Code</a></li>
+            <li><a href="{{ site.base_url }}/tag/domains" class="{{ set_active('tag/domains') }}">Domains</a></li>
+          </ul>
+          <ul>
+            <li><a href="{{ site.base_url }}/tag/account" class="{{ set_active('tag/account') }}">Account</a></li>
+            <li><a href="{{ site.base_url }}/tag/faq" class="{{ set_active('tag/faq') }}">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+
+      <div class="post">
+
+      {% if is_home %}
+
+        <h1>Getting Started</h1>
+        <div class="post-content">
+          <p>Thanks for visiting the Postach.io Help Center. If you're new to Postach.io, we recommend you watch this intro video and then read the FAQ below.</p>
+          <div class="post-video">
+            <iframe src="//player.vimeo.com/video/63611746" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+          <h3>FAQ</h3>
+          <p>
+            <strong>How do I create a post?</strong><br />
+            Simply open up Evernote on your desktop or mobile, create a note in your Postach.io notebook, tag it "published", and then sync Evernote. To learn more about creating posts, check out the <a href="{{ site.base_url }}/tag/creating-posts">Creating Posts</a> section.
+          </p>
+          <p>
+            <strong>How do I add comments to my blog?</strong><br />
+            We don't support native comments, but you can easily install Disqus comments on any of our themes.
+          </p>
+          <p>
+            <strong>How do I change my portrait photo?</strong><br />
+            To upload a custom profile photo, create a note in your sites notebook and add the image you'd like to use. Tag the note with "avatar" and sync Evernote. That's it! Pro-tip: square images work best. For more info, check out the <a href="{{ site.base_url }}/how-to-change-your-avatar">How to Change Your Avatar</a> page.
+          </p>
+        </div>
+
+        <div class="post-footer">
+          <div class="post-author">
+            <a href="#" class="post-author-avatar"><img src="http://www.gravatar.com/avatar/f2c53ba0eb2f52d89b414951922b0606.png" /></a>
+            <p>
+              <span class="post-author-name">Shawn Adrian</span><br />
+              <span class="post-date">Posted on January 21, 2014</span>
+            </p>
+          </div>
+          <ul class="post-options">
+            <li>{{ theme.social.like }}</li>
+            <li>{{ theme.social.share }}</li>
+          </ul>
+        </div>
+
+      {% elif is_tag %}
+
+        <h1>{{ tag|format_tag(False, True) }}</h1>
+
+        {% if posts %}
+        <ul class="posts">
+          {% for post in posts %}
+          <li>
+            <h3><a href="{{ post.permalink }}">{{ post.title }}</a> <!-- <a href="#" class="like">2 <span class="ss-icon">heart</span></a> --></h3>
+            <p>{{ post.content }}</p>
+            <div class="post-author">
+              <a href="#" class="post-author-avatar"><img src="http://www.gravatar.com/avatar/f2c53ba0eb2f52d89b414951922b0606.png" /></a>
+              <p>
+                <span class="post-author-name">Shawn Adrian</span>
+                <span class="post-date">Posted on {{ post.created_at|format_date }}</span>
+              </p>
+            </div>
+            <ul class="post-options">
+              <li>{{ theme.social.like }}</li>
+              <li>{{ theme.social.share }}</li>
+            </ul>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+      {% elif post.type == 'post' %}
+
+        <h1>{{ post.title }}</h1>
+        <div class="post-content" data-type-cleanup="true">
+          {{ post.content }}
+        </div>
+
+        <div class="post-footer">
+          <div class="post-author">
+            <a href="#" class="post-author-avatar"><img src="{{ site.avatar }}" /></a>
+            <p>
+              <span class="post-author-name">{{ site.author }}</span><br />
+              <span class="post-date">Posted on {{ post.created_at|format_date }}</span>
+            </p>
+          </div>
+          <ul class="post-options">
+            <li>{{ theme.social.like }}</li>
+            <li>{{ theme.social.share }}</li>
+          </ul>
+        </div>
+        
+        {% if site.disqus %}
+        <div class="post-comments">
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_shortname = '{{ site.disqus }}';
+            var disqus_url = '{{site.base_url}}{{ post.permalink }}';
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+        </div>
+        {% endif %}        
+
+      {% endif %}
+      </div><!-- end post -->
+
+    </div><!-- end container -->
+
+    {% if posts|length > site.settings.posts_per_page %}
+      {% if pagination %}
+      <div class="pagination">
+        <div class="container">
+          {% if pagination.prev %}<a href="{{ pagination.prev }}" class="prev"><span class="ss-icon">previous</span> Previous Page</a>{% endif %}
+          {% if pagination.next %}<a href="{{ pagination.next }}" class="next">Next Page <span class="ss-icon">next</span></a>{% endif %}
+        </div>
+      </div>
+      {% endif %}
+    {% endif %}
+
+    <footer class="site-footer">
+      <div class="container">
+        <ul>
+          <li class="nav-title">About</li>
+          <li><a href="http://blog.postach.io">Company Blog</a></li>
+          <li><a href="mailto:hello@postach.io?Subject=Press%20Inquiry" target="_top">Press Inquiries</a></li>
+          <li><a href="/terms">Terms</a></li>
+        </ul>
+        <ul>
+          <li class="nav-title">Community</li>
+          <li><a href="http://postach.io/discover">Discover</a></li>
+          <li><a href="http://help.postach.io">Help Center</a></li>
+          <li><a href="http://docs.postach.io">Theme Docs</a></li>
+        </ul>
+        <div class="right">
+          <p class="copy">&copy; 2014 <a href="http://inputlogic.ca">Input</a></p>
+        </div><!-- end post -->
+      </div>
+    </footer>
+
+    {{ footer_meta }}
+
+    <!-- js -->
+    <script type="text/javascript" src="{{ assets('js/help.min.js') }}"></script>
+
+  </body>
+</html>

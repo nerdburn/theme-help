@@ -1,0 +1,62 @@
+@import url(http://postach.io/static/themes/_assets/symbolset/ss-pika.css);
+
+@base: 1rem;
+
+.light {
+  font-family:'Avenir Next W01 Light';
+  font-weight: 300;
+}
+
+.medium {
+  font-family:'AvenirNextLTW01-Medium';
+  font-weight: 500;
+}
+
+.bold {
+  font-family:'Avenir Next LT W01 Bold';
+  font-weight: 700;
+}
+
+
+html { font-size: 100%; }
+
+body {
+  color: @text;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-family: 'Avenir Next W01 Light', helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: @red;
+  font-weight: bold;
+  padding: 0 0 @gutter 0;
+  font-family: 'AvenirNextLTW01-Medium';
+}
+
+h1 {
+  font-size: (@base * 2.5);
+  color: @black;
+}
+h2 { font-size: (@base * 2); }
+h3 { font-size: (@base * 1.5); }
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: @text;
+
+  &:hover {
+    color: @green;
+  }
+}
+
+
+/*
+font-family:'Avenir Next W01 Light';
+font-family:'AvenirNextW01-LightItal';
+font-family:'AvenirNextLTW01-Medium';
+font-family:'AvenirNextLTW01-MediumI 721278';
+font-family:'Avenir Next LT W01 Bold';
+font-family:'AvenirNextLTW01-BoldIta';
+*/
