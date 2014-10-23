@@ -604,6 +604,11 @@ a.btn.centered {
 .post-content p a,
 .post-content div a {
   text-decoration: underline;
+  color: #f76f4f;
+}
+.post-content p a:hover,
+.post-content div a:hover {
+  color: #636363;
 }
 .post-content p.gist,
 .post-content div.gist {
