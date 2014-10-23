@@ -39,7 +39,7 @@
     font-size: @size;
     line-height: (@size * 1.7);
     strong {
-      .medium;
+      font-weight: 400;
     }
   }
   
@@ -48,7 +48,7 @@
     border: 1px solid @hr;
     font-family: 'courier', sans-serif; 
     padding: @pad*2;
-    color: @black;
+    color: #999;
   }
 
   p, div {
@@ -80,7 +80,6 @@
 
   blockquote {
     font-size: 1.4rem;
-    .medium;
     border-left: 5px solid @hr;
     padding: @pad @gutter;
     margin: @pad 0;
@@ -162,7 +161,7 @@
 
         &.post-author-name {
           font-size: 1rem;
-          .medium;
+          font-weight: 400;
         }
       }
     }

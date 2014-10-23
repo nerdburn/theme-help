@@ -1,18 +1,5 @@
 @base: 1rem;
 
-.light {
-  font-weight: 300;
-}
-
-.medium {
-  font-weight: 500;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-
 html { font-size: 100%; }
 
 body {
@@ -20,11 +7,12 @@ body {
   line-height: 1.5rem;
   font-size: 1rem;
   font-family:'Roboto', helvetica, sans-serif;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4 {
   color: @red;
-  font-weight: bold;
+  font-weight: 400;
   padding: 0 0 @gutter 0;
 }
 
@@ -34,6 +22,7 @@ h1 {
 }
 h2 { font-size: (@base * 2); }
 h3 { font-size: (@base * 1.5); }
+h4 { font-size: (@base); }
 
 a {
   cursor: pointer;

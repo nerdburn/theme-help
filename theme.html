@@ -101,9 +101,6 @@
         <h1>Getting Started</h1>
         <div class="post-content">
           <p>Thanks for visiting the Postach.io Help Center. If you're new to Postach.io, we recommend you watch this intro video and then read the FAQ below.</p>
-          <div class="post-video">
-            <iframe src="//player.vimeo.com/video/63611746" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
           <h3>FAQ</h3>
           <p>
             <strong>How do I create a post?</strong><br />
@@ -149,7 +146,6 @@
               <a href="#" class="post-author-avatar"><img src="http://www.gravatar.com/avatar/f2c53ba0eb2f52d89b414951922b0606.png" /></a>
               <p>
                 <span class="post-author-name">Shawn Adrian</span>
-                <span class="post-date">Posted on {{ post.created_at|format_date }}</span>
               </p>
             </div>
             <ul class="post-options">
@@ -173,13 +169,14 @@
             <a href="#" class="post-author-avatar"><img src="{{ site.avatar }}" /></a>
             <p>
               <span class="post-author-name">{{ site.author }}</span><br />
-              <span class="post-date">Posted on {{ post.created_at|format_date }}</span>
             </p>
           </div>
+          <!--
           <ul class="post-options">
             <li>{{ theme.social.like }}</li>
             <li>{{ theme.social.share }}</li>
           </ul>
+          -->
         </div>
         
         {% if site.disqus %}
