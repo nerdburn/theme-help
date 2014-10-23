@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var window_site_data = window.SITEDATA
-  var base_url = (window_site_data.debug ? 'http://postachio.local:5000/' : 'http://postach.io/')
-  var $typeahead_search = $('[data-typeahead]')
+  var base_url = 'http://help.postach.io/';
+  var $typeahead_search = $('[data-typeahead]');
   var toc = $('.toc');
   var items = $('.toc-items');
   var trigger = $('.toc h2');
@@ -9,6 +9,7 @@ $(document).ready(function(){
   var icon = $('.toggle-icon');
   var content = $('.content');
 
+/*
   // hide header on scroll
   $(window).scroll(function(event){
     var st = $(this).scrollTop();
@@ -38,6 +39,7 @@ $(document).ready(function(){
       icon.html('navigateup');
     }
   });
+*/
 
   var filterData = function(parsedResponse) {
     console.log(parsedResponse.articles)
