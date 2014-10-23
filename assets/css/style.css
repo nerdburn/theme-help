@@ -446,12 +446,28 @@ a.btn.centered {
   margin: 0;
   line-height: 1.3;
 }
+.post h1 a {
+  color: #f76f4f;
+}
+.post h1 a:hover {
+  color: #636363;
+}
 .post h2,
 .post h3,
 .post h4 {
   color: #f76f4f;
   padding: 25px 0 12.5px 0;
   margin: 0;
+}
+.post h2 a,
+.post h3 a,
+.post h4 a {
+  color: #f76f4f;
+}
+.post h2 a:hover,
+.post h3 a:hover,
+.post h4 a:hover {
+  color: #636363;
 }
 .post .back {
   display: inline-block;
