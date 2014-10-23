@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
   // add class to all code tags
-  $('code').addClass('language-markup', function(){
-    
+  $('code, pre').addClass('language-markup', function(){
     // then load prism syntax highlighting
     var script = document.createElement('script');
     script.src = prismUrl;
