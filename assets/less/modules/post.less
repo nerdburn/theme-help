@@ -34,13 +34,20 @@
   .content(@gutter);
   display: block;
 
-  ul, ol, li, blockquote, p, div {
+  ul, ol, li, blockquote, p, div, pre {
     @size: 1.2rem;
     font-size: @size;
     line-height: (@size * 1.7);
     strong {
       .medium;
     }
+  }
+  
+  pre {
+    display: block;
+    border: 1px solid @hr;
+    font-family: 'courier', sans-serif; 
+    padding: @pad*2;
   }
 
   p, div {
