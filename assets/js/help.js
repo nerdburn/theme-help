@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var window_site_data = window.SITEDATA
+  //var window_site_data = window.SITEDATA
   var base_url = 'http://help.postach.io/';
   var $typeahead_search = $('[data-typeahead]');
   var toc = $('.toc');
