@@ -586,14 +586,6 @@ a.btn.centered {
 .post-content pre strong {
   font-weight: 400;
 }
-.post-content pre {
-  display: block;
-  border: 1px solid #f8f8f8;
-  font-family: 'courier', sans-serif;
-  padding: 25px;
-  color: #000;
-  font-size: 1rem;
-}
 .post-content p,
 .post-content div {
   padding: 12.5px 0;
