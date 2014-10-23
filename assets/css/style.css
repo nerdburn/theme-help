@@ -250,7 +250,6 @@ a:hover {
 }
 .search {
   position: relative;
-  font-family: 'Lato', helvetica, arial, sans-serif;
   float: right;
   width: 50%;
   padding-left: 140px;
@@ -263,6 +262,7 @@ a:hover {
   margin: 0;
   font-size: 1.1rem;
   z-index: 1080;
+  font-weight: 400;
 }
 .search label .ss-icon {
   position: absolute;
