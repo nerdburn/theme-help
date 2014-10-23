@@ -583,7 +583,8 @@ a.btn.centered {
 .post-content li,
 .post-content blockquote,
 .post-content p,
-.post-content div {
+.post-content div,
+.post-content pre {
   font-size: 1.2rem;
   line-height: 2.04rem;
 }
@@ -592,9 +593,16 @@ a.btn.centered {
 .post-content li strong,
 .post-content blockquote strong,
 .post-content p strong,
-.post-content div strong {
+.post-content div strong,
+.post-content pre strong {
   font-family: 'AvenirNextLTW01-Medium';
   font-weight: 500;
+}
+.post-content pre {
+  display: block;
+  border: 1px solid #f8f8f8;
+  font-family: 'courier', sans-serif;
+  padding: 25px;
 }
 .post-content p,
 .post-content div {
