@@ -94,9 +94,9 @@
 
     <div class="container content">
 
-      <div class="post">
-
       {% if is_home %}
+      
+      <div class="post">
 
         <h1>Getting Started</h1>
         <div class="post-content">
@@ -131,8 +131,12 @@
           </ul>
           -->
         </div>
+        
+      </div>
 
       {% elif is_tag %}
+      
+      <div class="post">      
 
         <h1>{{ tag|format_tag(False, True) }}</h1>
 
@@ -158,8 +162,12 @@
           {% endfor %}
         </ul>
         {% endif %}
+        
+      </div>
 
       {% elif post.type == 'post' %}
+
+      <div class="post">
 
         <h1>{{ post.title }}</h1>
         <div class="post-content" data-type-cleanup="true">
@@ -180,6 +188,7 @@
           </ul>
         </div>
         -->
+      </div>      
         
         {% if site.disqus %}
         <div class="post-comments">
@@ -197,7 +206,6 @@
         {% endif %}        
 
       {% endif %}
-      </div><!-- end post -->
 
     </div><!-- end container -->
 
