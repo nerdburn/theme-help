@@ -7,18 +7,8 @@
     {{ header_meta }}
 
     <!-- css -->
-    <link rel="stylesheet"  href="{{ assets('js/plugins/prism.css') }}">
-    <link rel="stylesheet"  href="{{ assets('css/style.css') }}">
-
-    <!-- fonts.com asynchronous -->
-    <script>
-    (function(d, t) {
-      var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-      g.src = '//fast.fonts.net/jsapi/33453319-536f-4e2f-9943-ed99e75a8297.js';
-      s.parentNode.insertBefore(g, s);
-    }(document, 'script'));
-    </script>
+    <link rel="stylesheet" href="{{ assets('css/style.css') }}">
+    <link rel="stylesheet" href="{{ assets('js/plugins/prism.css') }}">    
 
     {% if site.analytics %}
     <!-- universal analytics -->
