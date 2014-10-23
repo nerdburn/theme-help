@@ -276,6 +276,7 @@ a:hover {
   display: block;
   border: 2px solid #a3a3a3;
   padding-left: 40px;
+  font-weight: 300;
 }
 .search input:focus {
   border: 2px solid #37cca1;
